@@ -3,14 +3,18 @@
     ViewData["Title"] = "Home Page";
 }
 
+@if (ViewBag.IsBeta)
+{
+    <h2 class="display-4">This is the beta version of the application</h2>
+}
+
 <div class="text-center">
-    <h1 class="display-4">Welcome (for staging slot  v2.0 test)</h1>
+    <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
     <ul>
         @foreach (var product in Model)
         {
-           
-            <li>@product.ProductID , @product.ProductName</li>
+            <li>@product.ProductName</li>
         }
     </ul>
 </div>
